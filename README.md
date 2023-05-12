@@ -1,2 +1,3 @@
 # Dependency-length-swapper
 This method takes conllu data as the file path and returns a flipped version.
+Dependency length swapping is an interesting part of analysis in Computational Linguistics. This file takes (only) a single sentence in a conllu file, and returns a version of the sentence, where the root of the sentence is mirrored in its position. All dependents of the root are then mirrored around the position of the new root. This process is repeated for all the dependents of the dependents until all words in the sentence are changed. This only changes the word index and the head index and does not work on sentences where the index is of a "num-num" format.
